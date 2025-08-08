@@ -1,39 +1,52 @@
+import { useState } from 'react';
 import './Body.css'
 
 const Body = () => {
-    const obj = {
-        name : "왕찬웅",
-        addr : "파주시",
-        hp : "010-4937-3837"
-    };
-    // return(
-    //     <>
-    //         <h1>Body</h1>
-    //         <h2>숫자{obj.number}는 {obj.number % 2 === 0 ? "짝수" : "홀수"}</h2>
+    
+    const[state,setState] = useState({
+        name:"",
+        gender:"",
+        birth:"",
+        bio:""
+    });
 
-    //     </>
-    // );
+const handleOnChange = (e) => {
+    setState({
+        ...state,
+        [e.target.name] : e.target.value
+    });
+};
 
-    // if(obj.number % 2 === 0) {
-    //     return <div>{obj.number}는 짝수입니다.</div>;
-    // } else {
-    //     return <div>{obj.number}는 홀수입니다.</div>
-        // return null; //아무것도 출력하고 싶지 않을 때 null
-    // }
-    return(
+    
+    return (
         <>
-            {/* <br />
-            <form class="info">
-                <div class="input"><label>이름</label><input /><br /></div>
-                <div class="input"><label>나이</label><input></input></div>
-            </form> */}
+        <div>
             <div>
-                <p>이름     : {obj.name}</p>
-                <p>주소     : {obj.addr}</p>
-                <p>전화번호 : {obj.hp}</p>
+                <input name="name" value={state.name} onChange={handleOnChange} placeholder="이름"></input>
+            </div>
+            <div>
+                <select name="gender" value={state.gender} onChange={handleOnChange}>
+                    <option key={""}></option>
+                    <option key={"남성"}>남성</option>
+                    <option key={"여성"}>여성</option>
+                </select>
+            </div>
+            <div>
+                <input name="birth" type="date" value={state.birth} onChange={handleOnChange}></input>
+            </div>
+            <div>
+                <textarea name="bio" value={state.bio} onChange={handleOnChange}></textarea>
+            </div>
+            <h4>데이터 출력</h4>
+            <div>
+                <label>이름  </label>{state.name}<br />
+                <label>성별  </label>{state.gender}<br />
+                <label>생년월일  </label>{state.birth}<br />
+                <label>BIO  </label>{state.bio}<br />
+            </div>
             </div>
         </>
-    )
+    );
 };
 
 export default Body;

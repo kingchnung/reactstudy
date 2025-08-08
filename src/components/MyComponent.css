@@ -1,0 +1,36 @@
+.dataForm {
+    background-color: rgb(198, 222, 255);
+}
+
+.p1 {
+    background-color: red;
+    color: blue;
+}
+.p2 {
+    background-color: orange;
+    color: green;
+}
+.p3 {
+    background-color: yellow;
+    color: purple;
+}
+.p4 {
+    background-color: green;
+    color: yellow;
+}
+.p5 {
+    background-color: blue;
+    color: red;
+}
+.p6 {
+    background-color: purple;
+    color: orange;
+}
+
+table {
+    width: 100%;
+}
+td {
+    padding: 10px;
+    font-size: 30px;
+}

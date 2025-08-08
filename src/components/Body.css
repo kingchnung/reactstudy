@@ -1,4 +1,13 @@
-div.input {
-    padding: 5px;
+
+.menu {
+    background-color: red;
+}
+h2 {
+    padding: 10px;
+    background-color: green;
+}
+
+.body {
     
+    color: rgb(198, 222, 255);
 }
