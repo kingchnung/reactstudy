@@ -1,14 +1,14 @@
 
-import NoticeForm from "./NoticeForm";
+
 import NoticeList from "./NoticeList";
 
 
 
-const NoticeMain = ({notice}) => {
+const NoticeMain = ({notice, onUpdate, onDelete}) => {
     
     return (
         <div className="NoticeMain">
-            <NoticeList notice={notice} />
+            <NoticeList notice={notice} onUpdate={onUpdate} onDelete={onDelete} />
         </div>
     );
 }

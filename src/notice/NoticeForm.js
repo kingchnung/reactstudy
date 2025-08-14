@@ -35,13 +35,13 @@ const NoticeForm = ({ onCreate }) => {
         <div className="NoticeForm">
             <form>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">게시자</label>
-                    <input onChange={onChangeWriter} type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value={writer} />
+                    <label for="exampleInputEmail1" class="form-label"><h2>게시자</h2></label>
+                    <input onChange={onChangeWriter} type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value={writer} placeholder="관리자 이름이나 활동 명을 입력하세요." />
                         <div id="emailHelp" class="form-text"></div>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">게시글</label>
-                    <input onChange={onChangeContent} type="text" class="form-control" id="exampleInputPassword1" value={content}/>
+                    <label for="exampleInputPassword1" class="form-label"><h2>게시글</h2></label>
+                    <input onChange={onChangeContent} type="text" class="form-control" id="exampleInputPassword1" value={content} placeholder="게시할 공지사항 내용을 입력하세요." />
                 </div>
                 <button type="button" onClick={onSubmitNotice} class="btn btn-primary">진행시켜!</button>
             </form>
